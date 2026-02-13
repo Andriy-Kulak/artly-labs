@@ -13,9 +13,36 @@ const quicksand = Quicksand({
 });
 
 export const metadata: Metadata = {
-  title: "Artly Labs | Parent Operating System 0-6",
+  metadataBase: new URL("https://artlylabs.com"),
+  title: "Artly Labs | Sonito + Parent OS (Ages 0-6)",
   description:
-    "Artly Labs is building connected products for parents with children ages 0-6, starting with sleep outcomes through Sonito.",
+    "Our app Sonito improves baby sleep now. Next: feeding/solids and development for ages 0-6.",
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: "Artly Labs | Sonito + Parent OS (Ages 0-6)",
+    description:
+      "Our app Sonito improves baby sleep now. Next: feeding/solids and development for ages 0-6.",
+    url: "/",
+    siteName: "Artly Labs",
+    type: "website",
+    images: [
+      {
+        url: "/og/artly-share.png",
+        width: 1200,
+        height: 630,
+        alt: "Artly Labs - Parent operating system for ages 0-6",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Artly Labs | Sonito + Parent OS (Ages 0-6)",
+    description:
+      "Our app Sonito improves baby sleep now. Next: feeding/solids and development for ages 0-6.",
+    images: ["/og/artly-share.png"],
+  },
 };
 
 export default function RootLayout({
