@@ -12,17 +12,18 @@ Artly Labs is building the parent operating system for ages 0-6, starting with s
 ## Current Wedge (What Exists Today)
 - Product: Sonito (`https://sonito.app/`) - baby sleep tracking and optimization.
 - Traction: nearly 200 paying customers and about $2k MRR.
-- Core insight: parents do not just want logs; they want fewer wakeups, better routines, and confidence in daily decisions.
+- Core insight: parents do not just want logs; they want fewer wakeups, better sleep outcomes, and confidence in daily decisions.
 
 ## Founder-Market Fit Story (Website + Applications)
-- Founder is a new parent who experienced the pain firsthand and used existing tools daily.
+- Solo founder is a new parent who experienced the pain firsthand and used existing tools daily.
+- Founder is applying solo, with partner support as a constant real-world feedback loop.
 - Existing parent apps in this category often feel 5-8 years behind on UX, speed, and personalization.
 - Artly Labs exists because current technology allows dramatically better product quality, iteration speed, and parent-specific customization.
 
 ## Why This Can Be Venture-Scale
 - Massive, recurring market: each new birth cohort replenishes demand.
 - High-intent user segment: parents actively pay for tools that reduce stress and improve child outcomes.
-- Multi-product expansion path: sleep is the first daily behavior loop; adjacent loops include feeding/solids, routines, development, and family coordination.
+- Multi-product expansion path: sleep is the first daily behavior loop; adjacent loops include feeding/solids, development, and family coordination.
 - Roll-up opportunity: several legacy products in this market have weak UX, weak personalization, and slow product velocity.
 
 ## Company Narrative for Angels / FU / YC
@@ -50,13 +51,13 @@ Artly Labs is building the trusted daily decision layer for early parenthood.
 - Cross-sell into existing Sonito base before broader acquisition spend.
 
 ### Phase 3: Multi-Product Platform (later)
-- Expand into routines and development after feeding/solids proves pull.
+- Expand into development and other adjacent 0-6 workflows after feeding/solids proves pull.
 - Launch/acquire and modernize high-demand tools in 0-6 market.
 - Unify accounts, billing, identity, and recommendations across products.
 - Become the default subscription for early-parent decision support.
 
 ## Moat Design
-- Proprietary behavioral dataset across sleep + routines.
+- Proprietary behavioral dataset across sleep + feeding.
 - Outcome-focused recommendation engine tuned on real family usage patterns.
 - Distribution moat from trust, referrals, and multi-product bundling.
 - Execution moat: rapid iteration in under-served categories with outdated incumbents.
@@ -120,4 +121,4 @@ Use this pattern consistently:
 2. Are you open to acquisition/roll-up strategy in year 1, or only organic product expansion?
 
 ## Suggested Core Message (Website + Applications)
-"Artly Labs is building the parent operating system for ages 0-6. We start with sleep, where Sonito already helps families improve routines, and expand into the next high-impact parent workflows with modern, personalized products."
+"Artly Labs is building the parent operating system for ages 0-6. We start with sleep, where Sonito already helps families improve outcomes, and expand into the next high-impact parent workflows with modern, personalized products."

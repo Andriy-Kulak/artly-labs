@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Nunito, Quicksand } from "next/font/google";
+import AnchorOffset from "./AnchorOffset";
 import "./globals.css";
 
 const nunito = Nunito({
@@ -54,6 +55,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${nunito.variable} ${quicksand.variable} antialiased`}>
         {children}
+        <AnchorOffset />
       </body>
     </html>
   );

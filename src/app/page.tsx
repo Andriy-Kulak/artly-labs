@@ -93,13 +93,14 @@ export default function Home() {
           </div>
           <div>
             <p className="eyebrow">Current Product</p>
-            <h2>What Sonito is, in one line.</h2>
+            <h2>What Sonito does, in one line.</h2>
             <p className="sonito-tldr">
-              Sonito is a baby sleep tracker and guidance app that helps parents
-              reduce guesswork, improve sleep routines, and get more rest.
+              Sonito is a baby sleep app with tracking, nap forecasts, and
+              personalized guidance that helps parents reduce guesswork, improve
+              sleep outcomes, and get more rest.
             </p>
             <ul className="impact-points">
-              <li>Sleep outcomes first</li>
+              <li>Nap forecast + sleep outcomes</li>
               <li>Clear, fast daily decisions</li>
               <li>Foundation for the full 0-6 stack</li>
             </ul>
@@ -158,10 +159,11 @@ export default function Home() {
               <p className="eyebrow">About Us</p>
               <h2>Built by two parents who needed better tools.</h2>
               <p>
-                Two parents, Andriy and Selene, built Artly Labs after struggling
-                with outdated baby apps that were hard to trust. We are building
-                simpler, more useful products that help families make better daily
-                decisions with less stress.
+                Two parents, Andriy & Selene, built Artly Labs after struggling
+                with outdated baby apps that were hard to trust. Andriy is the
+                solo founder, and Selene is a hands-on product feedback partner.
+                We are building simpler, more useful products that help families
+                make better daily decisions with less stress.
               </p>
               <div className="hero-actions callout-actions">
                 <a
