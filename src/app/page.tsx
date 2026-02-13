@@ -2,22 +2,22 @@ import Image from "next/image";
 
 const roadmap = [
   {
-    stage: "Now",
+    step: "01",
     title: "Sleep (Sonito)",
-    detail:
-      "Prove daily value with a modern sleep product that helps parents make better decisions quickly.",
+    outcome: "Help families sleep better with clearer daily decisions.",
+    image: "/assets/4.png",
   },
   {
-    stage: "Next",
+    step: "02",
     title: "Feeding & Solids",
-    detail:
-      "Expand into the next high-frequency workflow with the same speed, clarity, and personalization.",
+    outcome: "Bring structure to mealtimes and reduce parent guesswork.",
+    image: "/assets/5.png",
   },
   {
-    stage: "Then",
-    title: "Routines & Development",
-    detail:
-      "Build a connected product stack for the full 0-6 journey under one trusted brand.",
+    step: "03",
+    title: "Development",
+    outcome: "Support milestones with practical, personalized guidance.",
+    image: "/assets/7.png",
   },
 ];
 
@@ -34,48 +34,54 @@ export default function Home() {
             priority
           />
         </a>
-        <a href="https://sonito.app/" className="btn btn-primary" target="_blank" rel="noreferrer">
+        <a
+          href="https://sonito.app/"
+          className="btn btn-primary nav-cta"
+          target="_blank"
+          rel="noreferrer"
+        >
           Visit Sonito
         </a>
       </header>
 
       <main className="site-main">
         <section className="hero reveal" style={{ animationDelay: "120ms" }}>
-          <p className="eyebrow">Parent Products, Rebuilt</p>
-          <h1>A modern software company for parents with kids ages 0-6.</h1>
-          <p className="hero-subhead">
-            Artly Labs starts with Sonito in baby sleep, then expands into
-            feeding/solids, routines, and development. The thesis is simple:
-            legacy parent tools are outdated, and families deserve products that
-            are faster, clearer, and truly personalized.
-          </p>
-          <div className="hero-actions">
-            <a href="#sonito" className="btn btn-secondary">
-              See Current Product
-            </a>
-            <a href="#vision" className="btn btn-ghost">
-              See 0-6 Vision
-            </a>
+          <div className="hero-grid">
+            <div>
+              <p className="eyebrow">Parent Products, Rebuilt</p>
+              <h1>
+                Our app Sonito improves baby sleep now.
+              </h1>
+              <p className="hero-subhead">
+                Next: feeding/solids and development for{" "}
+                <span className="age-highlight">ages 0-6</span>.
+              </p>
+              <div className="hero-actions">
+                <a href="#sonito" className="btn btn-secondary">
+                  See Sonito
+                </a>
+                <a href="#vision" className="btn btn-ghost">
+                  See Roadmap
+                </a>
+              </div>
+            </div>
+            <div className="hero-art-wrap">
+              <Image
+                src="/assets/hero-parent-baby.png"
+                alt="Parent holding sleeping baby"
+                width={1000}
+                height={1000}
+                className="hero-art"
+              />
+            </div>
           </div>
         </section>
 
-        <section id="sonito" className="section section-split reveal" style={{ animationDelay: "220ms" }}>
-          <div>
-            <p className="eyebrow">Current Product</p>
-            <h2>Sonito is the wedge: sleep outcomes first.</h2>
-            <p>
-              Sonito proves demand in a painful, daily workflow. It gives
-              parents an easier way to track patterns and make better sleep
-              decisions, while creating the foundation for broader 0-6 products.
-            </p>
-            <div className="inline-brand">
-              <Image src="/sonito/icon.png" alt="Sonito icon" width={34} height={34} />
-              <span>Sonito by Artly Labs</span>
-            </div>
-            <a href="https://sonito.app/" className="text-link" target="_blank" rel="noreferrer">
-              Open sonito.app
-            </a>
-          </div>
+        <section
+          id="sonito"
+          className="section section-split reveal"
+          style={{ animationDelay: "220ms" }}
+        >
           <div className="preview-card">
             <Image
               src="/sonito/ss_1.png"
@@ -85,38 +91,89 @@ export default function Home() {
               className="preview-image"
             />
           </div>
+          <div>
+            <p className="eyebrow">Current Product</p>
+            <h2>What Sonito is, in one line.</h2>
+            <p className="sonito-tldr">
+              Sonito is a baby sleep tracker and guidance app that helps parents
+              reduce guesswork, improve sleep routines, and get more rest.
+            </p>
+            <ul className="impact-points">
+              <li>Sleep outcomes first</li>
+              <li>Clear, fast daily decisions</li>
+              <li>Foundation for the full 0-6 stack</li>
+            </ul>
+            <a
+              href="https://sonito.app/"
+              className="text-link"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Open sonito.app
+            </a>
+          </div>
         </section>
 
-        <section id="vision" className="section reveal" style={{ animationDelay: "300ms" }}>
-          <p className="eyebrow">Bigger Vision</p>
-          <h2>From one focused product to a connected parent operating stack.</h2>
+        <section
+          id="vision"
+          className="section roadmap-section reveal"
+          style={{ animationDelay: "300ms" }}
+        >
+          <p className="eyebrow">Roadmap</p>
+          <h2>How Artly Labs grows from one product to a full 0-6 platform.</h2>
           <div className="roadmap-grid">
             {roadmap.map((item) => (
-              <article key={item.title} className="roadmap-card">
-                <p className="stage">{item.stage}</p>
+              <article key={`${item.step}-${item.title}`} className="roadmap-card">
+                <div className="roadmap-art-wrap">
+                  <Image
+                    src={item.image}
+                    alt={item.title}
+                    width={1000}
+                    height={1000}
+                    className="roadmap-art"
+                  />
+                </div>
+                <div className="roadmap-step-wrap">
+                  <p className="roadmap-step">Step {item.step}</p>
+                </div>
                 <h3>{item.title}</h3>
-                <p>{item.detail}</p>
+                <p className="roadmap-outcome">{item.outcome}</p>
               </article>
             ))}
           </div>
         </section>
 
         <section className="section callout reveal" style={{ animationDelay: "380ms" }}>
-          <p className="eyebrow">Founder-Market Fit</p>
-          <h2>This started from firsthand pain, not abstract market research.</h2>
-          <p>
-            I am a new parent and experienced the problem directly. The existing
-            tools felt 5-8 years behind. Artly Labs exists to build the products
-            families should already have: simple, trustworthy, and genuinely
-            useful every day.
-          </p>
-          <div className="hero-actions callout-actions">
-            <a href="https://sonito.app/" className="btn btn-primary" target="_blank" rel="noreferrer">
-              Try Sonito
-            </a>
-            <a href="#vision" className="btn btn-ghost">
-              View Roadmap
-            </a>
+          <div className="founder-grid">
+            <div className="founder-art-wrap">
+              <Image
+                src="/assets/founder-story-family.png"
+                alt="Family founder story illustration"
+                width={1000}
+                height={1000}
+                className="founder-art"
+              />
+            </div>
+            <div>
+              <p className="eyebrow">About Us</p>
+              <h2>Built by two parents who needed better tools.</h2>
+              <p>
+                Two parents, Andriy and Selene, built Artly Labs after struggling
+                with outdated baby apps that were hard to trust. We are building
+                simpler, more useful products that help families make better daily
+                decisions with less stress.
+              </p>
+              <div className="hero-actions callout-actions">
+                <a
+                  href="https://sonito.app/"
+                  className="btn btn-primary"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Try Sonito
+                </a>
+              </div>
+            </div>
           </div>
         </section>
       </main>

@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
-import { Newsreader, Space_Grotesk } from "next/font/google";
+import { Nunito, Quicksand } from "next/font/google";
 import "./globals.css";
 
-const spaceGrotesk = Space_Grotesk({
-  variable: "--font-space-grotesk",
+const nunito = Nunito({
+  variable: "--font-nunito",
   subsets: ["latin"],
 });
 
-const newsreader = Newsreader({
-  variable: "--font-newsreader",
+const quicksand = Quicksand({
+  variable: "--font-quicksand",
   subsets: ["latin"],
 });
 
@@ -25,7 +25,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${spaceGrotesk.variable} ${newsreader.variable} antialiased`}>
+      <body className={`${nunito.variable} ${quicksand.variable} antialiased`}>
         {children}
       </body>
     </html>

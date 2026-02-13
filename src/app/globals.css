@@ -1,22 +1,21 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f6f4fb;
+  --background: #f7f5fc;
   --surface: #ffffff;
   --ink: #1f1135;
   --ink-muted: #5a4b78;
   --stroke: rgba(31, 17, 53, 0.12);
-  --accent-solid: #4f1f87;
+  --accent-solid: #4a237f;
   --accent-pink: #e93c90;
   --accent-blue: #3d6efe;
-  --accent-gradient: linear-gradient(120deg, #4f1f87 0%, #e93c90 52%, #3d6efe 100%);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--ink);
-  --font-sans: var(--font-space-grotesk);
-  --font-serif: var(--font-newsreader);
+  --font-sans: var(--font-nunito);
+  --font-serif: var(--font-quicksand);
 }
 
 * {
@@ -31,20 +30,19 @@ body {
 
 body {
   color: var(--ink);
-  font-family: var(--font-space-grotesk), "Avenir Next", sans-serif;
+  font-family: var(--font-nunito), "Avenir Next", sans-serif;
   background:
-    radial-gradient(circle at 6% 3%, rgba(233, 60, 144, 0.16), transparent 24%),
-    radial-gradient(circle at 95% 4%, rgba(61, 110, 254, 0.16), transparent 24%),
-    linear-gradient(180deg, #f2eefb 0%, #f6f4fb 55%, #f3f0fb 100%);
+    radial-gradient(circle at 8% 4%, rgba(233, 60, 144, 0.13), transparent 24%),
+    radial-gradient(circle at 92% 5%, rgba(61, 110, 254, 0.13), transparent 24%),
+    linear-gradient(180deg, #f4f1fb 0%, #f7f5fc 58%, #f4f1fb 100%);
 }
 
 .site-shell {
   padding: 1.15rem 1.25rem 4rem;
 }
 
-.site-main,
-.topbar {
-  width: min(1080px, 100%);
+.site-main {
+  width: min(1100px, 100%);
   margin: 0 auto;
 }
 
@@ -54,20 +52,25 @@ body {
 }
 
 .topbar {
+  width: min(1040px, calc(100% - 1.5rem));
+  margin: 0 auto;
   position: sticky;
-  top: 0.9rem;
+  top: 0.6rem;
   z-index: 20;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 0.75rem;
-  margin-bottom: 1rem;
-  border: 1px solid var(--stroke);
+  margin-bottom: 1.35rem;
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  outline: 1px solid rgba(74, 35, 127, 0.14);
   border-radius: 16px;
   padding: 0.7rem 0.85rem;
-  backdrop-filter: blur(10px);
-  background: rgba(255, 255, 255, 0.76);
-  box-shadow: 0 8px 30px rgba(31, 17, 53, 0.08);
+  backdrop-filter: blur(12px) saturate(140%);
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow:
+    0 16px 40px rgba(31, 17, 53, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.78);
 }
 
 .brand {
@@ -90,44 +93,74 @@ body {
 }
 
 .hero {
-  padding: clamp(1.45rem, 4vw, 3.35rem);
+  padding: clamp(1.25rem, 3.4vw, 2.6rem);
   background:
     linear-gradient(145deg, rgba(255, 255, 255, 0.95), rgba(248, 244, 255, 0.96)),
-    radial-gradient(circle at 86% 10%, rgba(233, 60, 144, 0.2), transparent 33%);
+    radial-gradient(circle at 86% 10%, rgba(233, 60, 144, 0.12), transparent 35%);
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.08fr 0.92fr;
+  gap: 1rem;
+  align-items: center;
+}
+
+.hero-art-wrap {
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(74, 35, 127, 0.16);
+  border-radius: 18px;
+  background: linear-gradient(160deg, #ffffff, #f7f3ff);
+  padding: 0.6rem;
+}
+
+.hero-art {
+  width: 100%;
+  max-width: 390px;
+  height: auto;
 }
 
 .eyebrow {
   margin: 0;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  font-size: 0.78rem;
+  font-size: 0.76rem;
   font-weight: 700;
   color: var(--accent-solid);
 }
 
 .hero h1,
 .section h2 {
-  margin: 0.7rem 0 0;
-  font-family: var(--font-newsreader), Georgia, serif;
-  letter-spacing: -0.01em;
+  margin: 0.65rem 0 0;
+  font-family: var(--font-quicksand), var(--font-nunito), sans-serif;
+  letter-spacing: 0;
+  font-weight: 700;
 }
 
 .hero h1 {
-  max-width: 20ch;
-  font-size: clamp(2rem, 6vw, 4rem);
-  line-height: 0.99;
+  max-width: 16ch;
+  font-size: clamp(1.62rem, 3.9vw, 2.75rem);
+  line-height: 1.02;
 }
 
 .hero-subhead {
-  margin: 1.15rem 0 0;
-  max-width: 64ch;
-  font-size: clamp(1rem, 2.2vw, 1.22rem);
-  line-height: 1.63;
+  margin: 1.05rem 0 0;
+  max-width: 40ch;
+  font-size: clamp(0.98rem, 1.8vw, 1.08rem);
+  line-height: 1.55;
   color: var(--ink-muted);
 }
 
+.age-highlight {
+  display: inline-block;
+  padding: 0 0.26em;
+  border-radius: 0.28em;
+  background: linear-gradient(180deg, rgba(255, 235, 140, 0), rgba(255, 235, 140, 0.85));
+}
+
 .hero-actions {
-  margin-top: 1.55rem;
+  margin-top: 1.25rem;
   display: flex;
   flex-wrap: wrap;
   gap: 0.7rem;
@@ -138,7 +171,7 @@ body {
   align-items: center;
   justify-content: center;
   border-radius: 999px;
-  padding: 0.7rem 1.15rem;
+  padding: 0.68rem 1.12rem;
   border: 1px solid transparent;
   text-decoration: none;
   font-weight: 650;
@@ -162,58 +195,87 @@ body {
   box-shadow: 0 8px 18px rgba(31, 17, 53, 0.24);
 }
 
+.nav-cta {
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
 .btn-secondary {
-  border-color: rgba(79, 31, 135, 0.24);
-  background: rgba(79, 31, 135, 0.06);
+  border-color: rgba(74, 35, 127, 0.24);
+  background: rgba(74, 35, 127, 0.06);
 }
 
 .btn-ghost {
   border-color: var(--stroke);
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.85);
 }
 
 .section {
-  padding: clamp(1.25rem, 3vw, 2rem);
+  padding: clamp(1.2rem, 3vw, 1.8rem);
 }
 
 .section h2 {
-  font-size: clamp(1.45rem, 4vw, 2.2rem);
-  line-height: 1.14;
+  font-size: clamp(1.35rem, 3.6vw, 2rem);
+  line-height: 1.15;
 }
 
 .section p {
   margin: 0.95rem 0 0;
   color: var(--ink-muted);
-  line-height: 1.63;
+  line-height: 1.58;
 }
 
 .section-split {
   display: grid;
-  grid-template-columns: 1.1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 1rem;
   align-items: center;
 }
 
-.inline-brand {
-  margin-top: 1rem;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.6rem;
-  border: 1px solid var(--stroke);
-  border-radius: 999px;
-  padding: 0.38rem 0.75rem 0.38rem 0.38rem;
-  background: rgba(79, 31, 135, 0.04);
-  font-size: 0.92rem;
-  color: var(--ink);
+.preview-card {
+  border: 1px solid rgba(74, 35, 127, 0.15);
+  border-radius: 16px;
+  padding: 0.5rem;
+  background: linear-gradient(140deg, rgba(74, 35, 127, 0.08), rgba(61, 110, 254, 0.08));
 }
 
-.inline-brand img {
-  border-radius: 10px;
+.preview-image {
+  width: 100%;
+  height: auto;
+  border-radius: 11px;
+}
+
+.impact-points {
+  margin: 1rem 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.45rem;
+}
+
+.sonito-tldr {
+  margin: 0.9rem 0 0;
+  border: 1px solid rgba(74, 35, 127, 0.2);
+  border-radius: 12px;
+  padding: 0.7rem 0.85rem;
+  background: rgba(74, 35, 127, 0.05);
+  color: var(--ink);
+  line-height: 1.5;
+}
+
+.impact-points li {
+  color: var(--ink);
+  font-weight: 520;
+  border: 1px solid var(--stroke);
+  border-radius: 999px;
+  padding: 0.42rem 0.8rem;
+  width: fit-content;
+  background: rgba(74, 35, 127, 0.05);
 }
 
 .text-link {
   display: inline-block;
-  margin-top: 0.75rem;
+  margin-top: 0.85rem;
   color: var(--accent-solid);
   font-weight: 650;
   text-decoration: none;
@@ -223,58 +285,114 @@ body {
   text-decoration: underline;
 }
 
-.preview-card {
-  border: 1px solid var(--stroke);
-  border-radius: 16px;
-  padding: 0.5rem;
-  background:
-    linear-gradient(135deg, rgba(79, 31, 135, 0.07), rgba(61, 110, 254, 0.07));
-}
-
-.preview-image {
-  width: 100%;
-  height: auto;
-  border-radius: 12px;
-}
-
 .roadmap-grid {
   margin-top: 1rem;
   display: grid;
-  gap: 0.9rem;
+  gap: 0.8rem;
   grid-template-columns: repeat(3, minmax(0, 1fr));
+  max-width: 1040px;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: stretch;
 }
 
 .roadmap-card {
+  position: relative;
   border: 1px solid var(--stroke);
   border-radius: 14px;
-  padding: 0.95rem;
-  background: rgba(79, 31, 135, 0.03);
+  padding: 0.8rem;
+  background: rgba(74, 35, 127, 0.04);
+  text-align: center;
 }
 
-.stage {
-  margin: 0;
-  font-size: 0.76rem;
+.roadmap-art-wrap {
+  border-radius: 12px;
+  border: 1px solid rgba(74, 35, 127, 0.16);
+  background: #ffffff;
+  padding: 0.2rem;
+  min-height: 170px;
+  display: grid;
+  place-items: center;
+}
+
+.roadmap-art {
+  width: 62%;
+  max-width: 185px;
+  height: auto;
+  max-height: 150px;
+  object-fit: contain;
+}
+
+.roadmap-step {
+  margin: 0.6rem 0 0;
+  width: fit-content;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(74, 35, 127, 0.24);
+  border-radius: 999px;
+  padding: 0.18rem 0.5rem;
+  font-size: 0.72rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   color: var(--accent-solid);
   font-weight: 700;
+  background: rgba(74, 35, 127, 0.08);
+}
+
+.roadmap-step-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.roadmap-card::after {
+  content: none !important;
+  display: none !important;
 }
 
 .roadmap-card h3 {
-  margin: 0.45rem 0 0;
-  font-size: 1.02rem;
+  margin: 0.32rem 0 0;
+  font-size: 1rem;
 }
 
-.roadmap-card p {
-  margin: 0.5rem 0 0;
-  font-size: 0.95rem;
+.roadmap-outcome {
+  margin: 0.45rem 0 0;
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
+.roadmap-section .eyebrow,
+.roadmap-section h2 {
+  text-align: center;
 }
 
 .callout {
   background:
     linear-gradient(150deg, rgba(33, 14, 58, 0.96), rgba(66, 27, 120, 0.95)),
-    radial-gradient(circle at 95% 0%, rgba(233, 60, 144, 0.4), transparent 35%);
+    radial-gradient(circle at 95% 0%, rgba(233, 60, 144, 0.35), transparent 35%);
   color: #f3efff;
+}
+
+.founder-grid {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 1rem;
+  align-items: center;
+}
+
+.founder-art-wrap {
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(243, 239, 255, 0.2);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.06);
+  padding: 0.5rem;
+}
+
+.founder-art {
+  width: 100%;
+  max-width: 360px;
+  height: auto;
 }
 
 .callout .eyebrow {
@@ -287,13 +405,7 @@ body {
 }
 
 .callout-actions {
-  margin-top: 1.2rem;
-}
-
-.callout .btn-ghost {
-  border-color: rgba(243, 239, 255, 0.35);
-  color: #f3efff;
-  background: rgba(255, 255, 255, 0.09);
+  margin-top: 1.1rem;
 }
 
 .reveal {
@@ -309,14 +421,23 @@ body {
   }
 }
 
-@media (max-width: 920px) {
+@media (max-width: 980px) {
   .topbar {
     top: 0.4rem;
   }
 
+  .hero-grid,
   .section-split,
-  .roadmap-grid {
+  .founder-grid {
     grid-template-columns: 1fr;
+  }
+
+  .hero-art {
+    max-width: 300px;
+  }
+
+  .roadmap-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .brand img {
@@ -325,7 +446,32 @@ body {
   }
 
   .btn {
-    padding: 0.65rem 1rem;
-    font-size: 0.95rem;
+    padding: 0.64rem 0.95rem;
+    font-size: 0.94rem;
+  }
+}
+
+@media (max-width: 680px) {
+  .roadmap-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .topbar {
+    width: min(1040px, calc(100% - 0.75rem));
+    gap: 0.45rem;
+    padding: 0.55rem 0.65rem;
+    border-radius: 14px;
+  }
+
+  .brand img {
+    max-width: 148px;
+    height: 30px;
+  }
+
+  .nav-cta {
+    padding: 0.5rem 0.82rem;
+    font-size: 0.88rem;
   }
 }
