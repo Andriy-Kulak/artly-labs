@@ -30,8 +30,7 @@ Do not turn this into a generic startup site or a dense investor dashboard.
 - Local brand assets:
   - `public/artly-labs-log.webp`
 - Sonito assets copied for relevant cross-brand context:
-  - `public/sonito/icon.png`
-  - `public/sonito/ss_1.png`
+  - `public/sonito/ss_1.webp`
 
 Use these sparingly and only where they reinforce the story.
 

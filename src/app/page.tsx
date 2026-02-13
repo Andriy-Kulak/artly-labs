@@ -5,19 +5,19 @@ const roadmap = [
     step: "01",
     title: "Sleep (Sonito)",
     outcome: "Help families sleep better with clearer daily decisions.",
-    image: "/assets/4.png",
+    image: "/assets/4.webp",
   },
   {
     step: "02",
     title: "Feeding & Solids",
     outcome: "Bring structure to mealtimes and reduce parent guesswork.",
-    image: "/assets/5.png",
+    image: "/assets/5.webp",
   },
   {
     step: "03",
     title: "Development",
     outcome: "Support milestones with practical, personalized guidance.",
-    image: "/assets/7.png",
+    image: "/assets/7.webp",
   },
 ];
 
@@ -67,7 +67,7 @@ export default function Home() {
             </div>
             <div className="hero-art-wrap">
               <Image
-                src="/assets/hero-parent-baby.png"
+                src="/assets/hero-parent-baby.webp"
                 alt="Parent holding sleeping baby"
                 width={1000}
                 height={1000}
@@ -84,7 +84,7 @@ export default function Home() {
         >
           <div className="preview-card">
             <Image
-              src="/sonito/ss_1.png"
+              src="/sonito/ss_1.webp"
               alt="Sonito app preview"
               width={1000}
               height={750}
@@ -147,7 +147,7 @@ export default function Home() {
           <div className="founder-grid">
             <div className="founder-art-wrap">
               <Image
-                src="/assets/founder-story-family.png"
+                src="/assets/founder-story-family.webp"
                 alt="Family founder story illustration"
                 width={1000}
                 height={1000}
