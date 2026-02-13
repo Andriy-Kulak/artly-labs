@@ -7,7 +7,7 @@
 - I'm a parent and felt this pain directly. Existing baby apps are outdated and not useful enough in real life.
 - We already have 170 paying customers and over $2k MRR, and 80x 5-star reviews on the App Store.
 - A bit about me: I have 10 years of engineering product experience, and I'm currently a founding engineer at a startup acquired by Coinbase. I'm transitioning to build this business full-time.
-- I'm focused on scaling Sonito in baby sleep, then expanding into feeding and development for parents from birth to age six. This is a big market opportunity right now with lots of outdated products.
+- I'm focused on scaling Sonito in baby sleep niche, then expanding into feeding and development for parents. This is a big market opportunity right now with lots of outdated products.
 - Thank you for your time. I hope to hear from you soon.
 
 ## Core Positioning (Use Everywhere)
